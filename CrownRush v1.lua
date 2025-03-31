@@ -144,7 +144,7 @@ function HOME()
     MN = gg.choice({
         '  EXIT'
     }, nil, 'MrHiep')
-    if MN == 1 then EXIT() end
+    if MN == 1 then exitAPI() end
     HOMEDM=-1
 end
 
