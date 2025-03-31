@@ -156,3 +156,4 @@ function exitAPI()
         os.exit()
     end
 end
+HOME()
