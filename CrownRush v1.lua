@@ -142,70 +142,13 @@ gg.toast('Mr.Hiep')
 
 function HOME()
     MN = gg.choice({
-        '  Free Upgrade',
         '  EXIT'
     }, nil, 'MrHiep')
-
-    if MN == 1 then upgrade() end 
-    if MN == 11 then EXIT() end
+    if MN == 1 then EXIT() end
     HOMEDM=-1
 end
 
 ----------------------ANTIBAN---------------------
-function upgrade()
-v = gg.getTargetInfo()
-xB="x64"
-zB=nil 
-if v.x64 then zB="x64" else zB="x32" end 
-if tostring(zB)~=tostring(xB) then
-else
-  MrHiepField("StaticDataResearchLevelUp", "0x10", false, false, 64)
-   gg.refineNumber("10~10000000000", 64)
-   gg.getResults(9999)
-   gg.editAll("0", 64)
-     MrHiepField("StaticDataTowerUpgradeCost", "0x18", false, false, 64)
-   gg.refineNumber("10~10000000000", 64)
-   gg.getResults(9999)
-   gg.editAll("0", 64)
-     MrHiepField("StaticDataTowerReinforce", "0x10", false, false, 64)
-   gg.refineNumber("10~10000000000", 64)
-   gg.getResults(9999)
-   gg.editAll("0", 64)
-     MrHiepField("StaticMonsterLevelUpDataClass", "0x18", false, false, 64)
-   gg.refineNumber("10~10000000000", 64)
-   gg.getResults(9999)
-   gg.editAll("0", 64)
-  gg.toast("Thành Công") 
-  end
-gg.clearResults()
-end
-----------------------SPEED---------------------
---------------EXIT------------------
 function EXIT()
-print("⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚")
-print("⧚⧚⧚                           Facebook                               ⧚⧚⧚")
-print("⧚⧚⧚https://Facebook.com/nhatkiemgiangho95⧚⧚⧚")
-print("⧚⧚⧚                                                                            ⧚⧚⧚")
-print("⧚⧚⧚                           Youtube                                  ⧚⧚⧚")
-print("⧚⧚⧚        https://youtube.com/@Mrhiep95         ⧚⧚⧚")
-print("⧚⧚⧚                                                                           ⧚⧚⧚")
-print("⧚⧚⧚              Scrip Được Viết By Mr.Hiệp             ⧚⧚⧚")
-print("⧚⧚⧚                                                                           ⧚⧚⧚")
-print("⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚⧚")
-gg.clearResults()
-gg.clearList()
-os.exit()
-end
-
-
--------------------------------------
-while(true)
-
-do
-
-    if gg.isVisible(true) then
-    HOMEDM=1
-    gg.setVisible(false) 
-    end 
-    if HOMEDM==1 then HOME() end
+HOM()
 end
