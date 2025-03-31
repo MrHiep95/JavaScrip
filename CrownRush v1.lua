@@ -149,6 +149,10 @@ function HOME()
 end
 
 ----------------------ANTIBAN---------------------
-function EXIT()
-HOM()
+function exitAPI()
+    if _G.returnToHOM then
+        returnToHOM()
+    else
+        os.exit()
+    end
 end
