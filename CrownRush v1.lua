@@ -1,159 +1,241 @@
-local gg = gg;
-APIHEXPATCH = gg.makeRequest('https://mrhiep95.atwebpages.com/APIHEXPATCH.lua').content 
-pcall(load(APIHEXPATCH))
-APISEARCHFIELD = gg.makeRequest('https://mrhiep95.atwebpages.com/APISEARCHFIELD.lua').content 
-pcall(load(APISEARCHFIELD))
-APILINKVOID = gg.makeRequest('https://mrhiep95.atwebpages.com/APILINKVOID.lua').content 
-pcall(load(APILINKVOID))
-APIHOOKVOID = gg.makeRequest('https://mrhiep95.atwebpages.com/APIHOOKVOID.lua').content 
-pcall(load(APIHOOKVOID))
-APISPEEDCB = gg.makeRequest('https://mrhiep95.atwebpages.com/APISPEEDCB.lua').content 
-pcall(load(APISPEEDCB))
-APISEARCHMRHIEP = gg.makeRequest('https://mrhiep95.atwebpages.com/APISEARCHMRHIEP.lua').content 
-pcall(load(APISEARCHMRHIEP))
-UR = gg.makeRequest('https://mrhiep95.atwebpages.com/UR.lua').content 
-pcall(load(UR))
------------[ Block Log ] --
-local C=string.rep(" ",1048576)
-Check={}
-for i= 1, 1024 do 
-   Check[i]=C 
-end 
-for A, B in pairs({gg.alert,gg.bytes,gg.copyText,gg.searchAddress,gg.searchNumber,gg.toast})
-   do a = pcall(B,Check)
-end
+gg.setVisible(false)
+functionTable = { -- table(bb0de53)
+	[1] = { -- table(53e2390)
+		['edits'] = { -- table(bab3489)
+			[1] = { -- table(cdd4c8e)
+				['Class'] = 'StaticDataManager',
+				['methodEdits'] = { -- table(b610caf)
+					[1] = { -- table(889e8bc)
+						['MethodName'] = 'GetAutoBanData',
+						['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+					},
+				},
+			},
+            [2] = { -- table(cdd4c8e)
+				['Class'] = 'AutoBanController',
+				['methodEdits'] = { -- table(b610caf)
+					[2] = { -- table(889e8bc)
+						['MethodName'] = 'CheckCurrencyBan',
+						['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+					},
+				},
+			},
+            [3] = { -- table(cdd4c8e)
+                ['Class'] = 'AutoBanController',
+                ['methodEdits'] = { -- table(b610caf)
+                    [3] = { -- table(889e8bc)
+                        ['MethodName'] = 'CheckStageBan',
+                        ['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [4] = { -- table(cdd4c8e)
+                ['Class'] = 'AutoBanController',
+                ['methodEdits'] = { -- table(b610caf)
+                    [4] = { -- table(889e8bc)
+                        ['MethodName'] = 'CheckGrowthLevelBan',
+                        ['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [5] = { -- table(cdd4c8e)
+                ['Class'] = 'UserPlayController',
+                ['methodEdits'] = { -- table(b610caf)
+                    [5] = { -- table(889e8bc)
+                        ['MethodName'] = 'CheckIsBanned',
+                        ['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [6] = { -- table(cdd4c8e)
+                ['Class'] = 'AutoBanService',
+                ['methodEdits'] = { -- table(b610caf)
+                    [7] = { -- table(889e8bc)
+                        ['MethodName'] = 'BanSelf',
+                        ['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [8] = { -- table(cdd4c8e)
+                ['Class'] = 'UserPlayServiceServer',
+                ['methodEdits'] = { -- table(b610caf)
+                    [8] = { -- table(889e8bc)
+                        ['MethodName'] = 'CheckIsBanned',
+                        ['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [9] = { -- table(cdd4c8e)
+                ['Class'] = 'SharedStaticDataWrapper',
+                ['methodEdits'] = { -- table(b610caf)
+                    [9] = { -- table(889e8bc)
+                        ['MethodName'] = 'get_AutoBan',
+                        ['edit'] = '\x00\x00\x80\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [10] = { -- table(cdd4c8e)
+                ['Class'] = 'StaticDataAutoBan',
+                ['methodEdits'] = { -- table(b610caf)
+                    [10] = { -- table(889e8bc)
+                        ['MethodName'] = 'get_AmountPerDaily',
+                        ['edit'] = '\x00\xE0\xAF\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [11] = { -- table(cdd4c8e)
+                ['Class'] = 'StaticDataAutoBan',
+                ['methodEdits'] = { -- table(b610caf)
+                    [11] = { -- table(889e8bc)
+                        ['MethodName'] = 'get_AmountPerSpend',
+                        ['edit'] = '\x00\xE0\xAF\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+            [12] = { -- table(cdd4c8e)
+                ['Class'] = 'StaticDataAutoBan',
+                ['methodEdits'] = { -- table(b610caf)
+                    [12] = { -- table(889e8bc)
+                        ['MethodName'] = 'get_DisposeableAmount',
+                        ['edit'] = '\x00\xE0\xAF\xD2\xC0\x03\x5F\xD6',
+                    },
+                },
+            },
+		},
+		['functionName'] = 'Antiban',
+	},
 
--- [ Spam Dump All Code Load ] --
-
-for v = 1, 59999 do
-load('local z = "Math Finger"') 
-end
-for v = 1, 79999 do
-load('local b = "Chemistry"')
-end
-for v = 1, 89999 do
-load('HSG = "Literature"')
-end
------------------------ANTI SSTOOL------------------
-if gg.isPackageInstalled("sstool.only.com.sstool") then
-    i = 1
-    gg.alert("PLEASE UNISTALL SS TOOL! SCRIPT WILL BE DELETED")
-   trash = gg.getFile():match('[^/]+$')
-os.remove(trash)
-    gg.setVisible(false)
-    while true do
-      gg.setVisible(false)      
-      gg.setVisible(true)
-    end
-    return
-  end
--------------------------ANTI LOAD-----------------
-AntiLoad=" \x54\x68\x61\x6e\x68\x44\x69\x65\x75\x50\x72\x6f\x74\x65\x63\x74 "
-AntiLoad=AntiLoad:rep(math.random(99))
-for i = 1,200 do;
-load(AntiLoad) end
-------------------------HEX PATCH-------------------
-local n, startAddress, endAddress = nil, 0, 0
-local function name(lib)
-	if n == lib then
-		return startAddress, endAddress
-	end
-	local ranges = gg.getRangesList(lib or 'libil2cpp.so')
-	for i, v in ipairs(ranges) do
-		if v.state == "Xa" then
-			startAddress = v.start
-			endAddress = ranges[#ranges]['end']
-			break
-		end
-	end
-	return startAddress, endAddress
-end
-
-local function setHexMemory(libname, offset, hex)
-	name(libname)
-	local t, total = {}, 0
-	for h in string.gmatch(hex, "%S%S") do
-	    table.insert(t, {
-	        address = startAddress + offset + total,
-	        flags = gg.TYPE_BYTE,
-	        value = h .. "r"
-	    })
-	    total = total + 1
-	end
-	local res = gg.setValues(t)
-	if type(res) ~= 'string' then
-		return true
-	else
-		gg.alert(res)
-		return false
-	end
-end
----------------------------------------------------
-on = "­🏴"
-off = "🚩" 
-speed = "­ЪЋљ"
-ig = " [INGAME]"
-lb = " [LOBBY]"
------------------INFO-------------------------------
-gg.getLibName("libil2cpp.so")
-Package = "net.gameduo.mm"
-Version = "1.2.4"
+	},
+}
 v = gg.getTargetInfo();
 if v.x64 then
 	xbit = "x64";
 else
 	xbit = "x32";
 end
-if v.packageName ~= Package then
-print("Mr.Hiệp\n\nVUI LÒNG CHỌN ĐÚNG TRÒ CHƠI CỦA SCRIPT\nPLEASE SELECT THE CORRECT GAME OF THE SCRIPT") 
-os.exit()
-end
-if v.versionName > Version then
-print("Mr.Hiệp\n\nSCRIPT ĐÃ CŨ, HÃY THAM GIA TELEGRAM ĐỂ YÊU CẦU CẬP NHẬT\nTHE SCRIPT IS OLD, PLEASE JOIN THE TELEGRAM AND REQUEST UPDATES") 
-os.exit()
-end
-if v.versionName < Version then
-print("Mr.Hiệp\n\nPHIÊN BẢN TRÒ CHƠI KHÔNG PHẢI MỚI NHẤT! VUI LÒNG CẬP NHẬT TRÒ CHƠI !\nTHE GAME IS NOT THE LATEST VERSION! PLEASE UPDATE")
-os.exit()
-end
 GameName = gg.getTargetInfo().label;
 GameVersion = gg.getTargetInfo().versionName;
-MrHiep = "Script By MrHiep \n---------------------------------------------\nGame : " .. GameName .. "  " .. xbit .. "\nVersion: " .. GameVersion .. "\n---------------------------------------------";
------------
-setHexMemory("libil2cpp.so",0x3B05B0, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x3B0630, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x3BA4FC, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x3BA5CC, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x3BA68C, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x447D74, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x465AE0, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x4A6A94, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x216E260, "00 00 80 D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x216E520, "00 E0 AF D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x465AE0, "00 E0 AF D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x216E528, "00 E0 AF D2 C0 03 5F D6")
-setHexMemory("libil2cpp.so",0x216E530, "00 E0 AF D2 C0 03 5F D6")
-gg.toast("ANTIBAN: ACTIVED!")
+scriptTitle = "Script By xGhostZ \n---------------------------------------------\nGame : " .. GameName .. "  " .. xbit .. "bit\nVersion: " .. GameVersion.." \n---------------------------------------------";
 
--------------------FIELD----------
 
------------------MENU-------------------------------
-gg.toast('Mr.Hiep')
+local file = io.open("Il2cppApi.lua","r")
+if file == nil then
+    io.open("Il2cppApi.lua","w+"):write(gg.makeRequest("https://raw.githubusercontent.com/kruvcraft21/GGIl2cpp/master/build/Il2cppApi.lua").content):close()
+end
+require("Il2cppApi")
+Il2cpp()
 
-function HOME()
-    MN = gg.choice({
-        '  EXIT'
-    }, nil, 'MrHiep')
-    if MN == 1 then exitAPI() end
-    HOMEDM=-1
+restoreFields = {}
+restoreMethods = {}
+
+function handleClick(editsTable, functionIndex)
+    if restoreFields[functionIndex] or restoreMethods[functionIndex] then
+        if restoreFields[functionIndex] then
+            gg.setValues(restoreFields[functionIndex])
+            restoreFields[functionIndex] = nil
+        end
+        if restoreMethods[functionIndex] then
+            gg.setValues(restoreMethods[functionIndex])
+            restoreMethods[functionIndex] = nil
+        end
+        gg.alert(functionTable[functionIndex].functionName .. " Disabled")
+    else
+        for i, v in pairs(editsTable) do
+            local getMethods = false
+            local getFields = false
+            if v.fieldEdits then
+                getFields = true
+            end
+            if v.methodEdits then
+                getMethods = true
+            end
+            local classTable = Il2cpp.FindClass({
+                {
+                    Class = v.Class,
+                    MethodsDump = getMethods,
+                    FieldsDump = getFields
+                }})[1][1]
+            if v.fieldEdits then
+                restoreFields[functionIndex] = {}
+                handleFieldEdits(v.Class, v.fieldEdits, classTable, functionIndex)
+            end
+            if v.methodEdits then
+                restoreMethods[functionIndex] = {}
+                handleMethodEdits(v.Class, v.methodEdits, classTable, functionIndex)
+            end
+        end
+        gg.alert(functionTable[functionIndex].functionName .. " Enabled")
+    end
 end
 
-----------------------ANTIBAN---------------------
-function exitAPI()
+function handleFieldEdits(className, fieldEditsTable, classTable, functionIndex)
+    local classInstances = Il2cpp.FindObject({className})[1]
+    local tempTable = {}
+    for i, v in pairs(classInstances) do
+        for index, value in pairs(fieldEditsTable) do
+            for fieldIndex, fieldData in pairs(classTable.Fields) do
+                if value.FieldName == fieldData.FieldName then
+                    tempTable[#tempTable + 1] = {
+                        address = v.address + tonumber(fieldData.Offset, 16),
+                        flags = gg.TYPE_DWORD,
+                        value = value.edit
+                    }
+                end
+            end
+        end
+    end
+    restoreFields[functionIndex] = gg.getValues(tempTable)
+    gg.setValues(tempTable)
+end
+
+function handleMethodEdits(className, methodEditsTable, classTable, functionIndex)
+    for i, v in pairs(methodEditsTable) do
+        for index, value in pairs(classTable.Methods) do
+            if v.MethodName == value.MethodName then
+                restoreMethods[functionIndex] = backupValues(tonumber(value.AddressInMemory, 16), #v.edit)
+                Il2cpp.PatchesAddress(tonumber(value.AddressInMemory, 16), v.edit)
+            end
+        end
+    end
+end
+
+function backupValues(address, byteCount)
+    local tempTable = {}
+    local offset = 0
+    for i = 1, byteCount do
+        tempTable[i] = {
+            address = address + offset,
+            flags = gg.TYPE_BYTE
+        }
+        offset = offset + 1
+    end
+    tempTable = gg.getValues(tempTable)
+    return tempTable
+end
+
+function home()
+    local menuItems = {}
+    for i, v in pairs(functionTable) do
+        menuItems[i] = v.functionName
+    end
+    local menu = gg.choice(menuItems, nil, scriptTitle)
+    if menu ~= nil then
+        handleClick(functionTable[menu].edits, menu)
+    end
+end
+
     if _G.returnToHOM then
         returnToHOM()
     else
         os.exit()
     end
 end
-HOME()
+home()
+
+while true do
+    if gg.isVisible() then
+        gg.setVisible(false)
+        home()
+    end
+    gg.sleep(100)
+end
